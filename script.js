@@ -21,8 +21,18 @@ function convertirMinutes() {
     const hours = Math.floor(minutes / 60);
     const remainingMinutes = minutes % 60;
 
+    // Conversion en jours de travail (7 heures par jour)
+    const hoursInWorkDay = 7;
+    const workDays = Math.floor(hours / hoursInWorkDay);
+    const remainingHoursForWorkDay = hours % hoursInWorkDay;
+
+    // Afficher la conversion en heures et minutes
     document.getElementById("conversionResultat").textContent = `${hours}h ${remainingMinutes}min`;
+
+    // Afficher la conversion en jours de travail
+    document.getElementById("workDaysResultat").textContent = `${workDays} jour(s) et ${remainingHoursForWorkDay}h`;
   } else {
     document.getElementById("conversionResultat").textContent = "Veuillez entrer un nombre valide.";
+    document.getElementById("workDaysResultat").textContent = "";
   }
 }
