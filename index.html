@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Outils de calcul de temps</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- Premier outil : Calcul du temps entre deux horaires -->
+      <div class="container">
+        <h1>Calculateur de temps</h1>
+
+        <div class="form-group">
+          <label for="startTime">Heure de début :</label>
+          <input type="time" id="startTime" />
+        </div>
+
+        <div class="form-group">
+          <label for="endTime">Heure de fin :</label>
+          <input type="time" id="endTime" />
+        </div>
+
+        <button onclick="calculerTemps()">Calculer le temps</button>
+
+        <p id="resultat"></p>
+        <p id="totalMinutes"></p>
+      </div>
+
+      <!-- Deuxième outil : Conversion de minutes en heures et minutes -->
+      <div class="container">
+        <h1>Convertisseur de minutes</h1>
+
+        <div class="form-group">
+          <label for="minutes">Minutes :</label>
+          <input type="number" id="minutes" placeholder="Entrer des minutes" />
+        </div>
+
+        <button onclick="convertirMinutes()">Convertir</button>
+
+        <p id="conversionResultat"></p>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
