@@ -1,3 +1,4 @@
+/* Style général */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -8,6 +9,7 @@ body {
   font-family: "Arial", sans-serif;
   background-color: #f4f4f9;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
@@ -15,7 +17,7 @@ body {
 
 .wrapper {
   display: flex;
-  gap: 20px; /* Espace entre les deux conteneurs */
+  gap: 20px; /* Espace entre les conteneurs */
 }
 
 .container {
@@ -59,4 +61,65 @@ p {
   margin-top: 15px;
   font-size: 18px;
   color: #333;
+}
+
+/* Style du bouton Ajouter */
+#addMinutesButton {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+#addMinutesButton:hover {
+  background-color: #45a049;
+}
+
+/* Style de la liste des minutes */
+#minutesList {
+  list-style-type: none;
+  padding-left: 0;
+  margin-top: 15px;
+  text-align: left;
+  max-height: 150px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 10px;
+  background-color: #f9f9f9;
+}
+
+#minutesList li {
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+  font-size: 16px;
+  color: #333;
+}
+
+#minutesList li:last-child {
+  border-bottom: none;
+}
+
+.reset-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.reset-container button {
+  border: 1px solid grey;
+  color: black;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 200ms;
+}
+
+.reset-container button:hover {
+  color: white;
+  background-color: #df4444;
 }

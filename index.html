@@ -38,6 +38,27 @@
         <p id="conversionResultat"></p>
         <p id="workDaysResultat"></p>
       </div>
+
+      <!-- Troisième outil : Additionner plusieurs valeurs en minutes -->
+      <div class="container">
+        <h1>Additionner des minutes</h1>
+
+        <div class="form-group">
+          <label for="additionalMinutes">Ajouter des minutes :</label>
+          <input type="number" id="additionalMinutes" placeholder="Entrer des minutes" />
+        </div>
+
+        <button id="addMinutesButton">Ajouter</button>
+
+        <ul id="minutesList"></ul>
+
+        <p id="totalAddedMinutesResult"></p>
+      </div>
+    </div>
+
+    <!-- Bouton de réinitialisation -->
+    <div class="reset-container">
+      <button onclick="resetFields()">Reset</button>
     </div>
 
     <script src="script.js"></script>
